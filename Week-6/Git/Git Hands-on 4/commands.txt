@@ -1,0 +1,66 @@
+# Verify repository status
+git status
+
+# Create a new branch
+git branch GitWork
+
+# Switch to GitWork branch
+git checkout GitWork
+
+# Create hello.xml
+echo "<message>Hello from GitWork Branch</message>" > hello.xml
+
+# Check status
+git status
+
+# Add file
+git add hello.xml
+
+# Commit changes
+git commit -m "Added hello.xml in GitWork branch"
+
+# Switch to main/master
+git checkout main
+# Use master if your default branch is master
+
+# Modify hello.xml differently
+echo "<message>Hello from Master Branch</message>" > hello.xml
+
+# Add and commit
+git add hello.xml
+git commit -m "Modified hello.xml in main"
+
+# View commit history
+git log --oneline --graph --decorate --all
+
+# Compare branches
+git diff main GitWork
+
+# Launch visual diff
+git difftool main GitWork
+
+# Merge GitWork branch
+git merge GitWork
+
+# Resolve merge conflict manually
+
+# Add resolved file
+git add hello.xml
+
+# Commit resolved merge
+git commit -m "Resolved merge conflict"
+
+# Add backup files to .gitignore
+echo "*.bak" >> .gitignore
+
+git add .gitignore
+git commit -m "Updated .gitignore"
+
+# List branches
+git branch
+
+# Delete merged branch
+git branch -d GitWork
+
+# View commit history
+git log --oneline --graph --decorate
