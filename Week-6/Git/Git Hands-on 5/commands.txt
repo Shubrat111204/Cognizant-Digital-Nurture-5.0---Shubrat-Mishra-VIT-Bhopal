@@ -1,0 +1,29 @@
+# Verify repository status
+git status
+
+# List all local branches
+git branch
+
+# List local and remote branches
+git branch -a
+
+# Switch to main branch
+git checkout main
+# Use master if your default branch is master
+
+# Pull latest changes from remote repository
+git pull origin main
+# Use master instead of main if applicable
+
+# Push local commits to remote repository
+git push origin main
+# Use master instead of main if applicable
+
+# Verify repository status
+git status
+
+# View commit history
+git log --oneline --graph --decorate
+
+# Verify remote repository
+# Open GitHub repository in browser and check if latest commits are available.
