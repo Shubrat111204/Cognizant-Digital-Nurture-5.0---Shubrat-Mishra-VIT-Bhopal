@@ -1,0 +1,46 @@
+# Create a new branch
+git branch GitNewBranch
+
+# View all local and remote branches
+git branch -a
+
+# Switch to the new branch
+git checkout GitNewBranch
+
+# Create a sample file
+echo "This file was created in GitNewBranch." > sample.txt
+
+# Check repository status
+git status
+
+# Add the file
+git add sample.txt
+
+# Commit changes
+git commit -m "Added sample.txt in GitNewBranch"
+
+# Check status again
+git status
+
+# Switch back to master/main
+git checkout main
+# (Use git checkout master if your branch is master)
+
+# View differences between branches
+git diff main GitNewBranch
+# (Use master instead of main if applicable)
+
+# Visual comparison using P4Merge
+git difftool main GitNewBranch
+
+# Merge the branch
+git merge GitNewBranch
+
+# View commit history
+git log --oneline --graph --decorate
+
+# Delete merged branch
+git branch -d GitNewBranch
+
+# Verify status
+git status
